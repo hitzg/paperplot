@@ -21,10 +21,13 @@ _params = {'text.usetex' : True,
           'xtick.major.size': 2,
           'ytick.major.size': 2,
           'figure.autolayout':True,
-          'savefig.dpi': 72,
+          'savefig.dpi': 300,
           'savefig.bbox': 'tight',
           'savefig.pad_inches': 0.01
           }
+
+def latex_preamble_append(*args):
+    plt.rcParams['text.latex.preamble'].append(*args)
 
 def setup(param_updates=dict()):
     params = dict()
